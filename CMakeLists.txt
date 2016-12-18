@@ -1,0 +1,6 @@
+project(TDD_powtorka_02)
+cmake_minimum_required(VERSION 2.8)
+aux_source_directory(. SRC_LIST)
+#link_libraries(gtest)
+link_libraries(gmock -lpthread -lm)
+add_executable(${PROJECT_NAME} main.cpp tests.cpp calculator.h valparamtests.cpp mocktests.cpp)
