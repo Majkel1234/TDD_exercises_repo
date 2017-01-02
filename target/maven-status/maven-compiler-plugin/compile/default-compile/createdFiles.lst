@@ -1,0 +1,6 @@
+org/wwsis/lab1/model/Student.class
+org/wwsis/lab1/controllers/ThirdFormController.class
+org/wwsis/lab1/controllers/FirstFormController.class
+org/wwsis/lab1/controllers/ExampleController.class
+org/wwsis/lab1/Application.class
+org/wwsis/lab1/model/Address.class

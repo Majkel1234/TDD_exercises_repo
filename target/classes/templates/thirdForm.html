@@ -1,0 +1,19 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Lab 1</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+</head>
+<body>
+<form th:object="${address}" method="POST" th:action="@{/thirdForm}">
+    <span th:text="${formName}"></span><br/>
+    <span th:text="${formCity}"></span>
+    <input type="text" name="city" th:value="*{city}"/><br/>
+    <span th:text="${formStreet}"></span>
+    <input type="text" name="street" th:value="*{street}"/><br/>
+    <span th:text="${formHouseNumber}"></span>
+    <input type="text" name="houseNumber" th:value="*{houseNumber}"/><br/>
+    <button type="submit">Przeslij</button>
+</form>
+</body>
+</html>

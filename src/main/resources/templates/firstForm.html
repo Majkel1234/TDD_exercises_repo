@@ -1,0 +1,25 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Lab 1</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+</head>
+<body>
+    <form th:object="${student}" method="POST" th:action="@{/firstForm}">
+        <span th:text="${formName}"></span><br/>
+        <span th:text="${formFirstName}"></span>
+        <input type="text" name="firstName" th:value="*{firstName}"/><br/>
+        <span th:text="${formLastName}"></span>
+        <input type="text" name="lastName" th:value="*{lastName}"/><br/>
+        <span th:text="${formAge}"></span>
+        <input type="text" name="age" th:value="*{age}"/>
+        <!-- 6.3 W razie ujemnego wieku pojawia się informacja, że wiek nie może być ujemny -->
+        <span th:text="${error}" style="color: red"></span><br/>
+        <span th:text="${formAddress}"></span>
+        <input type="text" name="address" th:value="*{address}"/><br/>
+        <span th:text="${formEmail}"></span>
+        <input type="text" name="email" th:value="*{email}"/><br/>
+        <button type="submit">Przeslij</button>
+    </form>
+</body>
+</html>
